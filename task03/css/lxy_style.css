@@ -1,0 +1,62 @@
+h6{
+    color: darkgrey;
+    font-size: 10px;
+    font-weight: normal;
+}
+.task03_lxy_style_main{
+    border: 1px solid #999;
+    background-color: #eee;
+    padding: 20px;
+    min-height: 600px;
+    margin: 20px;
+}
+
+.task03_lxy_style_l{
+    float: left;
+    width: 200px;
+    height: 110px;
+    padding: 10px 10px 0 10px;
+    background-color: #ffffff;
+}
+.task03_lxy_style_l img{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+.task03_lxy_style_l_name{
+    font-size: 13px;
+    width: 80px;
+    float: right;
+    height: 80px;
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+.task03_lxy_style_r{
+    float: right;
+    width: 120px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+.task03_lxy_style_r img{
+    width: 80px;
+    height: 80px;
+    padding: 10px 20px 10px 20px;
+}
+
+.task03_lxy_style_c{
+    background-color: #ffffff;
+    border: 1px solid #999;
+    margin-left: 250px;
+    margin-right: 170px;
+    padding: 20px;
+}
+.task03_lxy_style_cw{
+    padding: 10px;
+}
+.task03_lxy_style_cw p{
+    text-indent: 2em;
+}
+.task03_lxy_style_cw img{
+    padding: 10px;
+}
