@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务十四：零基础JavaScript编码（二）</title>
+</head>
+<body>
+    <h3>污染城市列表</h3>
+    <ul id="list">
+
+    </ul>
+    <script type="text/javascript">
+        var data = [
+            ["北京", 90], ["上海", 50], ["福州", 10], ["广州", 50], ["成都", 90], ["西安", 100]
+        ];
+//      通过id获取到list列表
+        var list = document.getElementById("list");
+        var n = ["一", "二", "三", "四", "五", "六"];
+//      排序函数对数组的第1列中的值进行两两比较
+        data.sort(
+                function(x, y){
+                    return y[1] - x[1];
+                }
+        );
+
+        (function(){
+            /*
+             在注释下方编写代码
+             遍历读取data中各个城市的数据
+             将空气质量指数大于60的城市显示到list的列表中
+             */
+            for(var i = 0; i < data.length; i++){
+                if(data[i][1] > 60){
+                    var l = document.createElement("li");//创建li
+                    l.innerHTML = "第" + n[i] + "名," + data[i][0] + data[i][1];
+                    list.appendChild(l);//在list中添加li
+                }
+            }
+
+        })();
+    </script>
+</body>
+</html>
