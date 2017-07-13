@@ -11,18 +11,31 @@
     </ul>
     <script type="text/javascript">
         var data = [
-            ["北京", 90], ["上海", 50], ["福州", 10], ["广州", 50], ["成都", 90], ["西安", 100]
+            ["北京", 90],
+            ["上海", 50],
+            ["福州", 10],
+            ["广州", 50],
+            ["成都", 90],
+            ["西安", 100]
         ];
+        for (var i = 0; i < 200000; i++) {
+            data.push(["北京", 90])
+        }
 //      通过id获取到list列表
         var list = document.getElementById("list");
         var n = ["一", "二", "三", "四", "五", "六"];
 //      排序函数对数组的第1列中的值进行两两比较
+        var start = new Date().getTime(); // 开始时间
         data.sort(
                 function(x, y){
                     return y[1] - x[1];
                 }
         );
+        var end = new Date().getTime(); // 结束时间
 
+        console.log(end - start);
+        var start2 = new Date().getTime(); // 开始时间
+        var j = "";
         (function(){
             /*
              在注释下方编写代码
@@ -32,10 +45,13 @@
             for(var i = 0; i < data.length; i++){
                 if(data[i][1] > 60){
                     var l = document.createElement("li");//创建li
-                    l.innerHTML = "第" + n[i] + "名," + data[i][0] + data[i][1];
-                    list.appendChild(l);//在list中添加li
+                    j += "第" + n[i] + "名," + data[i][0] + data[i][1] + "<br>";
                 }
             }
+            list.innerHTML = j;
+            var end2 = new Date().getTime(); // 结束时间
+
+            console.log(end2 - start2);
 
         })();
     </script>
