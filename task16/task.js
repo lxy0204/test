@@ -17,29 +17,29 @@ var data = {};
  * 然后渲染list列表，增加新增的数据
  */
 function addData() {
-  var city = document.getElementById("city-input").value.trim();
-  var num = document.getElementById("value-input").value.trim();
-  if(!city.match(/^[\u4e00-\u9fa5|a-zA-Z]*$/)){
-    alert("请输入中文或者英文字符！");
-    return;
-  }
-  if(!num.match(/^-?[1-9]\d*$/)){
-    alert("请输入整数！");
-    return;
-  }
-  data[city] = num;
+    var city = document.getElementById("city-input").value.trim();
+    var num = document.getElementById("value-input").value.trim();
+    if(!city.match(/^[A-Za-z\u4E00-\u9FA5]+$/)){
+        alert("城市必须输入中文或者英文字符！");
+        return;
+    }
+    if(!num.match(/^-?[1-9]\d*$/)){
+        alert("空气质量数必须输入整数！");
+        return;
+    }
+    data[city] = num;
 }
 
 /**
  * 渲染table表格
  */
 function renderList() {
-  var j = "<tr><td>城市</td><td>天气</td><td>操作</td></tr>";
-  var i = 0;
-  for(var city in data){
-    j += "<tr><td>" + city + "</td><td>" + data[city] + "</td><button>" + "删除" + "</button></tr>";
-  }
-  document.getElementById("table").innerHTML = j;
+    var j = "<tr><td>城市</td><td>天气</td><td>操作</td></tr>";
+    var i = 0;
+    for(var city in data){
+        j += '<tr><td>' + city + '</td><td>' + data[city] + '</td><td>' + "<button onclick='delBtnHandle(\""+city+"\")'>" + '删除' + '</button></td></tr>';
+    }
+    document.getElementById("table").innerHTML = j;
 }
 
 /**
@@ -47,8 +47,8 @@ function renderList() {
  * 获取用户输入，更新数据，并进行页面呈现的更新
  */
 function addBtnHandle() {
-  addData();
-  renderList();
+    addData();
+    renderList();
 }
 
 /**
@@ -56,19 +56,16 @@ function addBtnHandle() {
  * 获取哪个城市数据被删，删除数据，更新表格显示
  */
 function delBtnHandle(ct) {
-  delete data[ct];
-  renderList();
+    delete data[ct];
+    renderList();
 }
 
 function init() {
-  // 在这下面给btn绑定一个点击事件，点击时触发addBtnHandle函数
-  var btn = document.getElementById("btn");
-  btn.click = addBtnHandle();
-  // 想办法给table中的所有删除按钮绑定事件，触发delBtnHandle函数
-  var tab = document.getElementById("table");
-  var button = tab.getElementsByTagName("button");
-  var ct = tab.children.value;
-  button.onclick = delBtnHandle(ct);
+    // 在这下面给btn绑定一个点击事件，点击时触发addBtnHandle函数
+    var btn = document.getElementById("btn");
+    window.onload = function(){
+        btn.addEventListener("click", addBtnHandle);
+    };
 }
 
 init();
