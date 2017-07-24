@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务25 删除添加节点</title>
+    <style>
+        div{
+            display: inline-block;
+            border: 1px solid #000000;
+            margin: 15px;
+            padding: 20px;
+            background-color: white;
+        }
+        #btn{
+            margin: 15px;
+            padding: 15px;
+        }
+        #input{
+            margin: 15px;
+        }
+        #insert{
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+<span id="container">
+    <div id="tree" class="one">门前
+        <div class="two">大桥
+            <div class="three">下
+                <div class="four">游过</div>
+                <div class="four">一群鸭</div>
+            </div>
+            <div class="three">1
+                <div class="four">2</div>
+                <div class="four">3</div>
+            </div>
+        </div>
+        <div class="two">4
+            <div class="three">5
+                <div class="four">6</div>
+                <div class="four">7</div>
+            </div>
+            <div class="three">8
+                <div class="four">9</div>
+                <div class="four">10</div>
+            </div>
+        </div>
+    </div>
+</span>
+<br>
+    <span id="btn">
+        <button id="button">遍历</button>
+        <button id="button_del">删除节点</button><br>
+        <input id="insert" type="text"><button id="button_add">添加节点</button><br>
+        <input id="input" type="text"><button id="find">查询</button><br>
+        <span id="text"></span>
+    </span>
+<script src="task.js"></script>
+</body>
+</html>
