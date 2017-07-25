@@ -4,11 +4,13 @@
 var tree = document.getElementById("tree");
 var arr = [];
 var flag;
+var remember;
 var timer = null;
 var divs = document.getElementsByTagName("div");
 var input = document.getElementById("input");
 var text = document.getElementById("text");
 var insert = document.getElementById("insert");
+var all_div = document.getElementById("container").getElementsByTagName("div");
 // 遍历
 function Traversal(node){
     if(node != null){
@@ -56,22 +58,45 @@ function back_color(){
     }
     text.innerHTML = "";
 }
-// 删除
-function delete_dom(){
-    Traversal(tree);
-    var target = window.event.target;
-    target.style.backgroundColor = "yellow";
+function init() {
+    for(var i = 0; i < all_div.length; i++){
+        all_div[i].onclick = function(e){
+            back_color();
+            this.style.backgroundColor = "yellow";
+            e.stopPropagation();
+            remember = this;
+        }
+    }
     document.getElementById("button_del").addEventListener("click", function(){
-        target.parentNode.removeChild(target);
-        back_color();
+        if(remember === undefined){
+            alert("请选择要删除的节点！")
+        }else{
+            var parent = remember.parentNode;
+            parent.removeChild(remember);
+        }
     });
     document.getElementById("button_add").addEventListener("click", function(){
         var insertCont = insert.value;
-        var content = target.innerHTML;
-        target.innerHTML = content + "<div class='newDiv'>" + insertCont + "</div>";
-    })
-}
-function init() {
+        if(insertCont === ""){
+            alert('请填写添加节点的内容');
+        }else if(remember === undefined){
+            alert('请先选中要操作的节点');
+        }else{
+            var newDiv = document.createElement("div");
+            newDiv.innerHTML = insertCont;
+            newDiv.className = "newDiv";
+            remember.appendChild(newDiv);
+            back_color();
+            for (var i = 0; i < all_div.length; i++) {
+                all_div[i].onclick = function(e) {
+                    back_color();
+                    this.style.backgroundColor = "yellow";
+                    e.stopPropagation();
+                    remember = this;
+                };
+            }
+        }
+    });
     document.getElementById("button").addEventListener("click", function() {
         back_color();
         Traversal(tree);
@@ -82,9 +107,6 @@ function init() {
         back_color();
         Traversal(tree);
         change_color();
-    });
-    document.getElementById("container").addEventListener("click", function() {
-        delete_dom();
     });
 }
 init();
