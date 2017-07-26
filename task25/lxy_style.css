@@ -1,0 +1,43 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+div{
+    margin: 10px;
+}
+dl{
+    width: 400px;
+    margin: 5px 25px;
+    padding: 5px;
+}
+dt{
+    cursor: pointer;
+    position: relative;
+}
+dd{
+    margin-left: 20px;
+}
+span{
+    position: absolute;
+    border: 1px solid black;
+    left: -20px;
+    top: 4px;
+    height: 12px;
+    width: 12px;
+    line-height: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+.hide{
+    display: none;
+}
+.selected{
+    background: greenyellow;
+    color: blue;
+}
+.result{
+    background: palevioletred;
+    color: black;
+}
