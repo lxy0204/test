@@ -5,18 +5,18 @@
 .con{
     min-width: 1280px;
 }
-/*²¿·ÖÍ¨ÓÃ*/
+/*éƒ¨åˆ†é€šç”¨*/
 ul,li,ol,ul{
     list-style: none;
 }
 body a {
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "å¾®è½¯é›…é»‘";
     text-decoration: none;
 }
 hr{
     border-top: 0px;
 }
-/*Í·²¿*/
+/*å¤´éƒ¨*/
 .top{
     height: 60px;
     padding: 0 70px;
@@ -26,7 +26,7 @@ hr{
 }
 .logo span{
     font-size: 23px;
-    font-family:"Î¢ÈíÑÅºÚ";
+    font-family:"å¾®è½¯é›…é»‘";
     vertical-align : super;
 }
 .menu{
@@ -41,14 +41,14 @@ hr{
     display: block;
     float: left;
     width: 100px;
-    height: 40px;
+    height: 36px;
     color: #787b83;
     font-size: 15px;
 }
-a:hover{
+.menu li a:hover{
     text-decoration: none;
     color: #ec0000;
-    border-bottom: 6px solid #ec0000;
+    border-bottom: 4px solid #ec0000;
 }
 .pic{
     height: 900px;
@@ -167,7 +167,7 @@ a:hover{
 }
 .show_pic{
 
- }
+}
 .show_textpic h4{
     font-size: 16px;
     text-align: center;
@@ -360,6 +360,7 @@ a:hover{
     margin-bottom: 14px;
     font-size: 12px;
     padding:10px 10px;
+    resize: none;
 }
 .bot{
     height: 325px;
