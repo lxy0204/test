@@ -73,8 +73,10 @@ function init() {
         }else{
             var parent = remember.parentNode;
             parent.removeChild(remember);
+            remember = undefined;
         }
     });
+
     document.getElementById("button_add").addEventListener("click", function(){
         var insertCont = insert.value;
         if(insertCont === ""){
@@ -98,6 +100,7 @@ function init() {
         }
     });
     document.getElementById("button").addEventListener("click", function() {
+        flag = 0;
         back_color();
         Traversal(tree);
         change_color();

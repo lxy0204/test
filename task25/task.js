@@ -89,7 +89,7 @@ function insert(){
             var dt = add[i].children[0].children[0].childNodes[1].nodeValue ;
             if(dt == input.value){
                 flag=1;
-                alert("式神已存在！");
+                alert("辣鸡！式神已存在！");
             }
         }
         sel.children[0].innerHTML = "-";
@@ -100,19 +100,23 @@ function insert(){
         new_dd.innerHTML = "<dl><dt><span>+</span>"+input.value+"</dt></dl>";
         sel.parentNode.appendChild(new_dd);
         var new_dt = new_dd.getElementsByTagName("dt")[0];
-        // 为新加入的节点进行操作前的准备
+        // 为新加入的节点进行操作前的准备（没有它会死！！！）
         new_dt.onclick = change_color;
         new_dt.children[0].onclick = flex;
     }
 }
 function delete_dom(){
     var sel = document.getElementById("tree").parentNode.getElementsByClassName("selected")[0];
-    if(sel.id == "tree"){
-        alert("式神不能灭！");
+    if(sel === undefined){
+        alert("请先选择要删除的式神！");
     }else{
-        var sel_super = sel.parentNode.parentNode;
-        var sel_parent = sel_super.parentNode;
-        sel_parent.removeChild(sel_super);
+        if(sel.id == "tree"){
+            alert("boss不能灭！");
+        }else{
+            var sel_super = sel.parentNode.parentNode;
+            var sel_parent = sel_super.parentNode;
+            sel_parent.removeChild(sel_super);
+        }
     }
 }
 function search_dom(){
