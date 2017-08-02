@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 550px;
+}
+form{
+    margin: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 50px;
+}
+select, input{
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid gray;
+}
+span{
+    font-weight: bold;
+}
+p{
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+    display: inline-block;
+}
