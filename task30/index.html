@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务30 表单（二）多个表单项的动态校验</title>
+    <style>
+        form{
+            width: 800px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            font-size: 24px;
+        }
+        button{
+            background: #23a7ff;
+            color: white;
+            border: 0;
+            width: 60px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        .in_name{
+            margin: 20px;
+        }
+        input{
+            margin: 20px;
+            width: 500px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .in_name > div{
+            font-size: 14px;
+            color: #969294;
+            margin-left: 180px;
+            float: left;
+        }
+        span{
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="in_name">
+        <span>姓名</span>
+        <input type="text" id="name" name="">
+        <div id="tips_n"></div>
+    </div>
+    <div class="in_name">
+        <span>密码</span>
+        <input type="password" id="pwd">
+        <div id="tips_pwd"></div>
+    </div>
+    <div class="in_name">
+        <span>确认密码</span>
+        <input type="password" id="sure_pwd">
+        <div id="tips_sp"></div>
+    </div>
+    <div class="in_name">
+        <span>邮箱</span>
+        <input type="text" id="email">
+        <div id="tips_e"></div>
+    </div>
+    <div class="in_name">
+        <span>手机</span>
+        <input type="text" id="phone">
+        <div id="tips_p"></div>
+    </div>
+    <button id="check" type="button">验证</button>
+</form>
+<script type="text/javascript" rel="script" src="task.js"></script>
+</body>
+</html>
