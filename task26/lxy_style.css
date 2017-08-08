@@ -1,0 +1,178 @@
+body{
+    display: block;
+    margin: 8px;
+}
+/*宇宙*/
+#main{
+    margin: 10px auto;
+    width: 790px;
+}
+#circle{
+    float: right;
+    width: 510px;
+    height: 510px;
+    border: 1px solid black;
+    display: flex;
+}
+#main::after{
+    clear: both;
+    display: block;
+    visibility: hidden;
+    content: "";
+    height: 0;
+    line-height: 0;
+}
+.planet{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background: #36c9f7;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+.road{
+    margin: auto;
+    display: inherit;
+    position: relative;
+    border-radius: 50%;
+    border: 1px dashed #000000;
+    background: greenyellow;
+}
+.road_1{
+    width: 200px;
+    height: 200px;
+}
+.road_2{
+    width: 300px;
+    height: 300px;
+}
+.road_3{
+    width: 400px;
+    height: 400px;
+}
+.road_4{
+    width: 500px;
+    height: 500px;
+}
+@keyframes spin{
+    to {
+        transform: rotate(1turn);
+    }
+}
+.people{
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: #d63e3a;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+    text-align: center;
+}
+.people_1{
+    animation: 8s spin infinite linear;
+    transform-origin: 50% 100px;
+    animation-play-state: paused;
+}
+.people_2{
+    animation: 16s spin infinite linear;
+    transform-origin: 50% 150px;
+    animation-play-state: paused;
+}
+.people_3{
+    animation: 24s spin infinite linear;
+    transform-origin: 50% 200px;
+    animation-play-state: paused;
+}
+.people_4{
+    animation: 32s spin infinite linear;
+    transform-origin: 50% 250px;
+    animation-play-state: paused;
+}
+.people_come{
+    display: block;
+}
+.start{
+    animation-play-state:running;
+}
+/*信息框*/
+#msg{
+    float: left;
+    width: 250px;
+    height: 510px;
+    border: 1px solid #000000;
+    color: #36c9f7;
+    overflow: auto;
+}
+#msg h1{
+    margin: 5px auto;
+    text-align: center;
+}
+#msg p{
+    font-size: 12px;
+    margin: 2px auto;
+    padding-left: 5px;
+    color: #5cb85c;
+}
+/*操作台*/
+#control_panel{
+    width: 780px;
+    height: 200px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid black;
+    position: relative;
+}
+#control_panel ul{
+    list-style: none;
+    text-align: center;
+}
+#control_panel li{
+    margin-bottom: 10px;
+}
+.li_hidden{
+    display: none;
+}
+#control_panel button{
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:visited, button:active, button:focus{
+    border: none;
+    outline: none;
+}
+#people_come{
+    position: absolute;
+    right:10px;bottom:10px;
+    background-color: #36c9f7;
+}
+#people_come:hover{
+    background-color: #338ca9;
+}
+.btn_start{
+    background-color: #5cb85c;
+}
+.btn_start:hover{
+    background-color: #449d44;
+}
+.btn_stop{
+    background-color: #d9534f;
+}
+.btn_stop:hover{
+    background-color: #c9302c;
+}
+.btn_destroy{
+    background-color: #f0ad4e;
+}
+.btn_destroy:hover{
+    background-color: #ec971f;
+}
