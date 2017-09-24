@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务21 Tag输入和兴趣爱好输入</title>
+    <style>
+        #box_tag{
+            background-color: black;
+            padding: 10px;
+            margin: 100px 10px;
+            font-size: 14px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>请在下面输入框输入内容，以空格或回车或逗号或顿号隔开</p>
+    tag:<input id="tag">
+    <br>
+    <div id="tag_in" style="margin-top: 20px"></div>
+
+    <textarea type="text" id="hobby" placeholder="请输入兴趣爱好" style="margin-top: 20px; height: 300px"></textarea>
+    <br>
+    <button id="hobby_btn">确认兴趣爱好</button>
+    <div id="hobby_in" style="margin-top: 20px"></div>
+
+    <script src="task.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+h6{
+    color: darkgrey;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+
+.task03_lxy_style_main{
+    border: 1px solid #999;
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px;
+    overflow: auto;
+    zoom: 1;
+    min-width: 600px;
+}
+
+.main_l{
+    float: left;
+    width: 200px;
+    height: 110px;
+    padding: 10px 10px 0 10px;
+    background-color: #ffffff;
+}
+.main_l img{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+.main_l_name{
+    font-size: 13px;
+    width: 80px;
+    float: right;
+    height: 80px;
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+.main_r{
+    float: right;
+    width: 120px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+.main_r img{
+    width: 80px;
+    height: 80px;
+    padding: 10px 20px 10px 20px;
+}
+
+.main_c{
+    background-color: #ffffff;
+    border: 1px solid #999;
+    margin-left: 250px;
+    margin-right: 170px;
+    padding: 20px;
+}
+.main_cw{
+    padding: 10px;
+
+}
+.main_cw p{
+    text-indent: 2em;
+}
+.main_cw img{
+    padding: 10px;
+    width: 50%;
+}

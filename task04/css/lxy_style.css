@@ -1,0 +1,55 @@
+.lxy_rac{
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+}
+
+
+
+.rac_lefttop{
+    height: 50px;
+    width: 50px;
+    background-color: #fc0;
+    border-radius: 0 0 50px 0;
+}
+.rac_rightbottom{
+    height: 50px;
+    width: 50px;
+    background-color: #fc0;
+    border-radius: 50px 0 0 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.r{
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*未脱离文档流元素的居中*/
+.ra_father{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.ra{
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    vertical-align: middle;
+}
+
+

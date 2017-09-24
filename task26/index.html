@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务26 行星与飞船（一）设计模式</title>
+    <link href="lxy_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="main">
+        <div id="circle">
+            <div class="road road_4">
+                <div class="people people_4"></div>
+                <div class="road road_3">
+                    <div class="people people_3"></div>
+                    <div class="road road_2">
+                        <div class="people people_2"></div>
+                        <div class="road road_1">
+                            <div class="people people_1"></div>
+                            <div class="planet">跑起来</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="msg">
+                <h1>跑况</h1>
+            </div>
+    </div>
+    <div id="control_panel">
+        <ul>
+            <li class="li_hidden" id="0">
+                <label>跑道一: </label>
+                <button type="button" value="start" class="btn_start">开始</button>
+                <button type="button" value="stop" class="btn_stop">暂停</button>
+                <button type="button" value="destroy" class="btn_destroy">原地爆炸</button>
+            </li>
+            <li class="li_hidden" id="1">
+                <label>跑道二: </label>
+                <button type="button" value="start" class="btn_start">开始</button>
+                <button type="button" value="stop" class="btn_stop">暂停</button>
+                <button type="button" value="destroy" class="btn_destroy">原地爆炸</button>
+            </li>
+            <li class="li_hidden" id="2">
+                <label>跑道三: </label>
+                <button type="button" value="start" class="btn_start">开始</button>
+                <button type="button" value="stop" class="btn_stop">暂停</button>
+                <button type="button" value="destroy" class="btn_destroy">原地爆炸</button>
+            </li>
+            <li class="li_hidden" id="3">
+                <label>跑道四: </label>
+                <button type="button" value="start" class="btn_start">开始</button>
+                <button type="button" value="stop" class="btn_stop">暂停</button>
+                <button type="button" value="destroy" class="btn_destroy">原地爆炸</button>
+            </li>
+        </ul>
+        <button id="people_come">增加跑者</button>
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>

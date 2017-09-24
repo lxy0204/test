@@ -1,0 +1,95 @@
+/*img的间隔问题http://www.cnblogs.com/lovelyun/p/4846222.html*/
+/*target选择器http://blog.csdn.net/a153375250/article/details/53258161*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table{
+    text-align: left;
+    border-collapse: collapse;
+    margin: 20px;
+    width: 400px;
+}
+tr{
+    height: 30px;
+}
+th{
+    background: black;
+    color: white;
+    border: 2px solid #ffffff;
+}
+td{
+    border: 2px solid #ffffff;
+}
+tr:nth-child(odd){
+    background-color: #ccc;
+}
+tr:nth-child(2), tr:nth-child(3), tr:nth-child(4){
+    color:#FF6666;
+}
+.input{
+    transition: width 3s;
+    width: 200px;
+    margin: 20px;
+}
+.input:focus{
+    width: 400px;
+}
+.banner{
+    margin: 20px;
+    width: 360px;
+    height: 188px;
+    position: relative;
+    overflow: hidden;
+}
+.banner input{
+    display: none;
+}
+.image{
+    width: 700%;
+    height: 100%;
+    position: relative;
+    transition: left 1s;
+    font-size: 0;
+}
+.image img{
+    width: 360px;
+    height: 188px;
+    display: inline-block;
+}
+.slider{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.slider a{
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+.slider a:hover{
+    background-color: gray;
+}
+#item_1:target~.image{
+    left: 0;
+}
+#item_2:target~.image{
+    left: -100%;
+}
+#item_3:target~.image{
+    left: -200%;
+}
+#item_4:target~.image{
+    left: -300%;
+}
+#item_5:target~.image{
+    left: -400%;
+}
+#item_6:target~.image{
+    left: -500%;
+}
+#item_7:target~.image{
+    left: -600%;
+}

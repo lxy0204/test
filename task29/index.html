@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务29 表单（一）单个表单项的检验</title>
+    <style>
+        form{
+            width: 700px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+            font-size: 18px;
+        }
+        button{
+            background: #23a7ff;
+            color: white;
+            border: 0;
+            width: 60px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        .in_name{
+            margin: 20px;
+        }
+        input{
+            margin: 20px;
+        }
+        #tips{
+            font-size: 14px;
+            color: #969294;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="in_name">
+            姓名
+            <input type="text" id="name">
+            <button id="check" type="button">验证</button>
+            <div id="tips">请填入4~16位的字符</div>
+        </div>
+    </form>
+</body>
+<script type="text/javascript" rel="script" src="task.js"></script>
+</html>

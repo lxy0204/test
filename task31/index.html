@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>任务31 表单（三）联动</title>
+    <link rel="stylesheet" type="text/css" href="lxy_style.css">
+</head>
+<body>
+    <form>
+        <input type="radio" name="students" id="stu" checked><p>在校生</p>
+        <input type="radio" name="students" id="not_stu"><p>非在校生</p>
+        <div id="school_stu" style="display: block">
+            <span>学校:</span>
+            <select name="province" id="province">
+                <option>请选择所在省市</option>
+                <option>北京</option>
+                <option>广东</option>
+                <option>上海</option>
+                <option>山东</option>
+            </select>
+            <select name="school" id="school">
+                <option>请选择学校</option>
+            </select>
+        </div>
+        <div id="no_stu" style="display: none">
+            <span>就业单位:</span>
+            <input type="text" id="company">
+        </div>
+    </form>
+    <script type="text/javascript" rel="script" src="task.js"></script>
+</body>
+</html>
